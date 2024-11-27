@@ -13,8 +13,18 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		33D0B1310E372943BC52399C /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
+		4D722BDB43064EDB9266AEF3 /* Inter-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F1C9A5975DE64E2585F92A48 /* Inter-Regular.otf */; };
 		7699B88040F8A987B510C191 /* libPods-SocialMediaReactNativeProject-SocialMediaReactNativeProjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-SocialMediaReactNativeProject-SocialMediaReactNativeProjectTests.a */; };
+		7E82CCE25F1141F498B8B2FF /* Inter-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BDDC7B4B651841D8AEB19E33 /* Inter-Bold.otf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		9400206C07934509A7E77835 /* Inter-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3723BC6A3E9142DEAC10248A /* Inter-SemiBold.otf */; };
+		C25EA98638B14F959B5B7D91 /* Inter-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 96DF4568750E4B3AA508B30D /* Inter-Light.otf */; };
+		C5B6AF3AA81D4FA78BA29FE1 /* Inter-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 219EBFE6A9684CF7B03B63F0 /* Inter-Thin.otf */; };
+		CF93555F413143B5BF27293A /* Inter-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5678C3F682594824987CB67A /* Inter-ExtraBold.otf */; };
+		D1C6FCA8B39544808B93D010 /* Inter-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 53E00D7FE7C04A799C9FDD93 /* Inter-Black.otf */; };
+		D3FFFA7ACBC84E429769B5FD /* helper.js in Resources */ = {isa = PBXBuildFile; fileRef = BEA60022215847BB8DCED834 /* helper.js */; };
+		EE237522BC954AAF80AC1792 /* Inter-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 03CF7ED217CF4E438485F3B3 /* Inter-ExtraLight.otf */; };
+		FFAE104DA00D49459370F733 /* Inter-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1A19C720AD5F45E687455E62 /* Inter-Medium.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +41,7 @@
 		00E356EE1AD99517003FC87E /* SocialMediaReactNativeProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocialMediaReactNativeProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* SocialMediaReactNativeProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SocialMediaReactNativeProjectTests.m; sourceTree = "<group>"; };
+		03CF7ED217CF4E438485F3B3 /* Inter-ExtraLight.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-ExtraLight.otf"; path = "../assets/fonts/Inter-ExtraLight.otf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* SocialMediaReactNativeProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialMediaReactNativeProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = SocialMediaReactNativeProject/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = SocialMediaReactNativeProject/AppDelegate.mm; sourceTree = "<group>"; };
@@ -39,13 +50,22 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = SocialMediaReactNativeProject/main.m; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = SocialMediaReactNativeProject/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-SocialMediaReactNativeProject-SocialMediaReactNativeProjectTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SocialMediaReactNativeProject-SocialMediaReactNativeProjectTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A19C720AD5F45E687455E62 /* Inter-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Medium.otf"; path = "../assets/fonts/Inter-Medium.otf"; sourceTree = "<group>"; };
+		219EBFE6A9684CF7B03B63F0 /* Inter-Thin.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Thin.otf"; path = "../assets/fonts/Inter-Thin.otf"; sourceTree = "<group>"; };
+		3723BC6A3E9142DEAC10248A /* Inter-SemiBold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-SemiBold.otf"; path = "../assets/fonts/Inter-SemiBold.otf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-SocialMediaReactNativeProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMediaReactNativeProject.debug.xcconfig"; path = "Target Support Files/Pods-SocialMediaReactNativeProject/Pods-SocialMediaReactNativeProject.debug.xcconfig"; sourceTree = "<group>"; };
+		53E00D7FE7C04A799C9FDD93 /* Inter-Black.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Black.otf"; path = "../assets/fonts/Inter-Black.otf"; sourceTree = "<group>"; };
+		5678C3F682594824987CB67A /* Inter-ExtraBold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-ExtraBold.otf"; path = "../assets/fonts/Inter-ExtraBold.otf"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-SocialMediaReactNativeProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMediaReactNativeProject.release.xcconfig"; path = "Target Support Files/Pods-SocialMediaReactNativeProject/Pods-SocialMediaReactNativeProject.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-SocialMediaReactNativeProject-SocialMediaReactNativeProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMediaReactNativeProject-SocialMediaReactNativeProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-SocialMediaReactNativeProject-SocialMediaReactNativeProjectTests/Pods-SocialMediaReactNativeProject-SocialMediaReactNativeProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-SocialMediaReactNativeProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SocialMediaReactNativeProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = SocialMediaReactNativeProject/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-SocialMediaReactNativeProject-SocialMediaReactNativeProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMediaReactNativeProject-SocialMediaReactNativeProjectTests.release.xcconfig"; path = "Target Support Files/Pods-SocialMediaReactNativeProject-SocialMediaReactNativeProjectTests/Pods-SocialMediaReactNativeProject-SocialMediaReactNativeProjectTests.release.xcconfig"; sourceTree = "<group>"; };
+		96DF4568750E4B3AA508B30D /* Inter-Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Light.otf"; path = "../assets/fonts/Inter-Light.otf"; sourceTree = "<group>"; };
+		BDDC7B4B651841D8AEB19E33 /* Inter-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Bold.otf"; path = "../assets/fonts/Inter-Bold.otf"; sourceTree = "<group>"; };
+		BEA60022215847BB8DCED834 /* helper.js */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = helper.js; path = ../assets/fonts/helper.js; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F1C9A5975DE64E2585F92A48 /* Inter-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Regular.otf"; path = "../assets/fonts/Inter-Regular.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +129,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		57F0D39171634CE68C075F4F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				53E00D7FE7C04A799C9FDD93 /* Inter-Black.otf */,
+				BDDC7B4B651841D8AEB19E33 /* Inter-Bold.otf */,
+				5678C3F682594824987CB67A /* Inter-ExtraBold.otf */,
+				03CF7ED217CF4E438485F3B3 /* Inter-ExtraLight.otf */,
+				96DF4568750E4B3AA508B30D /* Inter-Light.otf */,
+				1A19C720AD5F45E687455E62 /* Inter-Medium.otf */,
+				F1C9A5975DE64E2585F92A48 /* Inter-Regular.otf */,
+				3723BC6A3E9142DEAC10248A /* Inter-SemiBold.otf */,
+				219EBFE6A9684CF7B03B63F0 /* Inter-Thin.otf */,
+				BEA60022215847BB8DCED834 /* helper.js */,
+			);
+			name = Resources;
+			path = "";
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +163,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				57F0D39171634CE68C075F4F /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -247,6 +286,16 @@
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				33D0B1310E372943BC52399C /* PrivacyInfo.xcprivacy in Resources */,
+				D1C6FCA8B39544808B93D010 /* Inter-Black.otf in Resources */,
+				7E82CCE25F1141F498B8B2FF /* Inter-Bold.otf in Resources */,
+				CF93555F413143B5BF27293A /* Inter-ExtraBold.otf in Resources */,
+				EE237522BC954AAF80AC1792 /* Inter-ExtraLight.otf in Resources */,
+				C25EA98638B14F959B5B7D91 /* Inter-Light.otf in Resources */,
+				FFAE104DA00D49459370F733 /* Inter-Medium.otf in Resources */,
+				4D722BDB43064EDB9266AEF3 /* Inter-Regular.otf in Resources */,
+				9400206C07934509A7E77835 /* Inter-SemiBold.otf in Resources */,
+				C5B6AF3AA81D4FA78BA29FE1 /* Inter-Thin.otf in Resources */,
+				D3FFFA7ACBC84E429769B5FD /* helper.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
