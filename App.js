@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useState} from 'react';
+import React from 'react';
 import {
   SafeAreaView,
   TouchableOpacity,
@@ -11,75 +11,103 @@ import {faEnvelope} from '@fortawesome/free-regular-svg-icons';
 
 import Title from './components/Title/Title';
 import UserStory from './components/UserStory/UserStory';
+import UserPost from './components/UserPost/UserPost';
 
 import userStories from './assets/data/userStories';
+import userPosts from './assets/data/userPosts';
+
+import useGetRenderedData from './hooks/useGetRenderedData';
 
 import globalStyle from './assets/styles/globalStyle';
 
 const userStoriesPageSize = 4;
+const initialUserStoriesCurrentPage = 1;
 
-const paginate = (data, currentPage, pageSize) => {
-  const startIndex = (currentPage - 1) * pageSize;
-  const endIndex = startIndex + pageSize;
+const userPostsPageSize = 3;
+const initialUserPostsCurrentPage = 1;
 
-  return startIndex >= data.length ? [] : data.slice(startIndex, endIndex);
-};
+const App = () => {
+  const {
+    userRenderedData: userStoriesRenderedData,
+    handleLoadMoreData: handleLoadMoreStories,
+  } = useGetRenderedData({
+    initialUserDataCurrentPage: initialUserStoriesCurrentPage,
+    userDataPageSize: userStoriesPageSize,
+    userData: userStories,
+  });
 
-function App() {
-  const [userStoriesCurrentPage, setUserStoriesCurrentPage] = useState(1);
-  const [userStoriesRenderedData, setUserStoriesRenderedData] = useState([]);
-  const [isLoadingUserStories, setIsLoadingUserStories] = useState(false);
-
-  useEffect(() => {
-    setIsLoadingUserStories(true);
-
-    const initialUserStories = paginate(userStories, 1, userStoriesPageSize);
-
-    setUserStoriesRenderedData(initialUserStories);
-    setIsLoadingUserStories(false);
-  }, []);
-
-  const handleLoadMore = () => {
-    if (isLoadingUserStories) return;
-
-    setIsLoadingUserStories(true);
-
-    const contentToAppend = paginate(
-      userStories,
-      userStoriesCurrentPage + 1,
-      userStoriesPageSize,
-    );
-
-    if (contentToAppend.length > 0) {
-      setUserStoriesCurrentPage(prevPage => prevPage + 1);
-      setUserStoriesRenderedData(prevData => [...prevData, ...contentToAppend]);
-    }
-
-    setIsLoadingUserStories(false);
-  };
+  const {
+    userRenderedData: userPostsRenderedData,
+    handleLoadMoreData: handleLoadMorePosts,
+  } = useGetRenderedData({
+    initialUserDataCurrentPage: initialUserPostsCurrentPage,
+    userDataPageSize: userPostsPageSize,
+    userData: userPosts,
+  });
 
   return (
     <SafeAreaView>
-      <View style={globalStyle.header}>
-        <Title title="Let's Explore" />
-        <TouchableOpacity style={globalStyle.messageIcon}>
-          <FontAwesomeIcon icon={faEnvelope} size={20} color="#898DAE" />
-          <View style={globalStyle.messageNumberContainer}>
-            <Text style={globalStyle.messageNumber}>2</Text>
-          </View>
-        </TouchableOpacity>
-      </View>
-      <View style={globalStyle.userStoryContainer}>
+      <View style={globalStyle.userPostContainer}>
         <FlatList
-          horizontal
-          showsHorizontalScrollIndicator={false}
+          ListHeaderComponent={
+            <>
+              <View style={globalStyle.header}>
+                <Title title="Let's Explore" />
+                <TouchableOpacity style={globalStyle.messageIcon}>
+                  <FontAwesomeIcon
+                    icon={faEnvelope}
+                    size={20}
+                    color="#898DAE"
+                  />
+                  <View style={globalStyle.messageNumberContainer}>
+                    <Text style={globalStyle.messageNumber}>2</Text>
+                  </View>
+                </TouchableOpacity>
+              </View>
+              <View style={globalStyle.userStoryContainer}>
+                <FlatList
+                  horizontal
+                  showsHorizontalScrollIndicator={false}
+                  onEndReachedThreshold={0.5}
+                  onEndReached={handleLoadMoreStories}
+                  data={userStoriesRenderedData}
+                  renderItem={({item: {id, firstName, profileImage}}) => (
+                    <UserStory
+                      key={id}
+                      firstName={firstName}
+                      profileImage={profileImage}
+                    />
+                  )}
+                />
+              </View>
+            </>
+          }
+          data={userPostsRenderedData}
+          showsVerticalScrollIndicator={false}
           onEndReachedThreshold={0.5}
-          onEndReached={handleLoadMore}
-          data={userStoriesRenderedData}
-          renderItem={({item: {id, firstName, profileImage}}) => (
-            <UserStory
+          onEndReached={handleLoadMorePosts}
+          renderItem={({
+            item: {
+              id,
+              firstName,
+              lastName,
+              location,
+              image,
+              comments,
+              likes,
+              bookmarks,
+              profileImage,
+            },
+          }) => (
+            <UserPost
               key={id}
               firstName={firstName}
+              lastName={lastName}
+              location={location}
+              image={image}
+              comments={comments}
+              likes={likes}
+              bookmarks={bookmarks}
               profileImage={profileImage}
             />
           )}
@@ -87,6 +115,6 @@ function App() {
       </View>
     </SafeAreaView>
   );
-}
+};
 
 export default App;

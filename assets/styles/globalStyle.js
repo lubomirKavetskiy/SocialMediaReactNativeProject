@@ -5,20 +5,18 @@ import {getFontFamily} from '../fonts/helper';
 const globalStyle = StyleSheet.create({
   header: {
     alignItems: 'center',
-    marginLeft: 27,
-    marginTop: 30,
-    marginRight: 17,
+    marginTop: 32,
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
-  messageIcon: {padding: 14, backgroundColor: '#F9FAFB', borderRadius: 100},
+  messageIcon: {padding: 12, backgroundColor: '#F9FAFB', borderRadius: 100},
   messageNumberContainer: {
     position: 'absolute',
     top: 12,
-    right: 10,
+    right: 12,
     backgroundColor: '#F35BAC',
     borderRadius: 100,
-    width: 10,
+    width: 12,
     height: 10,
     alignItems: 'center',
     justifyContent: 'center',
@@ -26,12 +24,14 @@ const globalStyle = StyleSheet.create({
   },
   messageNumber: {
     color: '#FFFFFF',
-    fontSize: 6,
+    fontSize: 8,
     fontFamily: getFontFamily('Inter', 600),
   },
   userStoryContainer: {
-    marginTop: 10,
-    marginHorizontal: 28,
+    marginTop: 12,
+  },
+  userPostContainer: {
+    marginHorizontal: 24,
   },
 });
 
