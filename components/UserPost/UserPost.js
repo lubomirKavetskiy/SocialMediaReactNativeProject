@@ -11,6 +11,7 @@ import {
 
 import UserProfileImage from '../UserProfileImage/UserProfileImage';
 
+import {horizontalScale, scaleFontSize} from '../../assets/styles/scaling';
 import style from './style';
 
 const UserPost = ({
@@ -27,28 +28,47 @@ const UserPost = ({
     <View style={style.userPostContainer}>
       <View style={style.user}>
         <View style={style.userContainer}>
-          <UserProfileImage profileImage={profileImage} imageDimensions={48} />
+          <UserProfileImage
+            profileImage={profileImage}
+            imageDimensions={horizontalScale(48)}
+          />
           <View style={style.userTextContainer}>
             <Text style={style.userName}>{`${firstName} ${lastName}`}</Text>
             {location && <Text style={style.userLocation}>{location}</Text>}
           </View>
         </View>
-        <FontAwesomeIcon icon={faEllipsisH} size={24} color="#79869F" />
+        <FontAwesomeIcon
+          icon={faEllipsisH}
+          size={scaleFontSize(24)}
+          color="#79869F"
+        />
       </View>
       <View>
         <Image source={image} style={style.userImage} />
       </View>
       <View style={style.userPostStats}>
         <View style={style.userPostStatBtn}>
-          <FontAwesomeIcon icon={faHeart} size={16} color="#79869F" />
+          <FontAwesomeIcon
+            icon={faHeart}
+            size={scaleFontSize(16)}
+            color="#79869F"
+          />
           <Text style={style.userPostStatText}>{likes}</Text>
         </View>
         <View style={style.userPostStatBtn}>
-          <FontAwesomeIcon icon={faComment} size={16} color="#79869F" />
+          <FontAwesomeIcon
+            icon={faComment}
+            size={scaleFontSize(16)}
+            color="#79869F"
+          />
           <Text style={style.userPostStatText}>{comments}</Text>
         </View>
         <View style={style.userPostStatBtn}>
-          <FontAwesomeIcon icon={faBookmark} size={16} color="#79869F" />
+          <FontAwesomeIcon
+            icon={faBookmark}
+            size={scaleFontSize(16)}
+            color="#79869F"
+          />
           <Text style={style.userPostStatText}>{bookmarks}</Text>
         </View>
       </View>

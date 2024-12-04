@@ -1,10 +1,11 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {
   SafeAreaView,
   TouchableOpacity,
   View,
   Text,
   FlatList,
+  Dimensions,
 } from 'react-native';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {faEnvelope} from '@fortawesome/free-regular-svg-icons';
@@ -19,6 +20,7 @@ import userPosts from './assets/data/userPosts';
 import useGetRenderedData from './hooks/useGetRenderedData';
 
 import globalStyle from './assets/styles/globalStyle';
+import {scaleFontSize} from './assets/styles/scaling';
 
 const userStoriesPageSize = 4;
 const initialUserStoriesCurrentPage = 1;
@@ -45,6 +47,12 @@ const App = () => {
     userData: userPosts,
   });
 
+  useEffect(() => {
+    Dimensions.addEventListener('change', ({screen}) => {
+      console.log(screen);
+    });
+  });
+
   return (
     <SafeAreaView>
       <View style={globalStyle.userPostContainer}>
@@ -56,7 +64,7 @@ const App = () => {
                 <TouchableOpacity style={globalStyle.messageIcon}>
                   <FontAwesomeIcon
                     icon={faEnvelope}
-                    size={20}
+                    size={scaleFontSize(20)}
                     color="#898DAE"
                   />
                   <View style={globalStyle.messageNumberContainer}>

@@ -1,12 +1,17 @@
 import {StyleSheet} from 'react-native';
 import {getFontFamily} from '../../assets/fonts/helper';
+import {
+  horizontalScale,
+  scaleFontSize,
+  verticalScale,
+} from '../../assets/styles/scaling';
 
 const style = StyleSheet.create({
   userPostContainer: {
-    marginTop: 32,
+    marginTop: verticalScale(32),
     borderBottomWidth: 1,
     borderBottomColor: '#EFF2F6',
-    paddingBottom: 12,
+    paddingBottom: verticalScale(12),
   },
   user: {
     flexDirection: 'row',
@@ -16,36 +21,39 @@ const style = StyleSheet.create({
   userContainer: {
     flexDirection: 'row',
   },
-  userTextContainer: {justifyContent: 'center', marginLeft: 12},
+  userTextContainer: {
+    justifyContent: 'center',
+    marginLeft: horizontalScale(12),
+  },
   userName: {
     fontFamily: getFontFamily('Inter', 500),
-    fontSize: 16,
+    fontSize: scaleFontSize(16),
     color: '#000',
   },
   userLocation: {
     fontFamily: getFontFamily('Inter', 400),
-    fontSize: 12,
+    fontSize: scaleFontSize(12),
     color: '#79869F',
-    marginTop: 4,
+    marginTop: verticalScale(4),
   },
   userImage: {
     alignItems: 'center',
-    marginVertical: 12,
+    marginVertical: verticalScale(12),
   },
   userPostStats: {
     flexDirection: 'row',
-    paddingHorizontal: 4,
+    paddingHorizontal: horizontalScale(12),
   },
   userPostStatBtn: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginRight: 24,
+    marginRight: horizontalScale(24),
   },
   userPostStatText: {
     fontFamily: getFontFamily('Inter', 400),
-    fontSize: 12,
+    fontSize: scaleFontSize(12),
     color: '#79869F',
-    marginLeft: 4,
+    marginLeft: horizontalScale(4),
   },
 });
 
