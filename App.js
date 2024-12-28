@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {
   SafeAreaView,
   TouchableOpacity,
@@ -6,6 +6,8 @@ import {
   Text,
   FlatList,
   Dimensions,
+  Switch,
+  Platform,
 } from 'react-native';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {faEnvelope} from '@fortawesome/free-regular-svg-icons';
@@ -53,6 +55,8 @@ const App = () => {
     });
   });
 
+  const [isOpen, setIsOpen] = useState(false);
+  console.log(Platform);
   return (
     <SafeAreaView>
       <View style={globalStyle.userPostContainer}>
@@ -71,6 +75,29 @@ const App = () => {
                     <Text style={globalStyle.messageNumber}>2</Text>
                   </View>
                 </TouchableOpacity>
+              </View>
+              <View
+                style={{
+                  flex: 1,
+                  flexDirection: 'row',
+                  justifyContent: 'flex-start',
+                }}>
+                <Switch
+                  style={
+                    Platform.OS === 'android'
+                      ? {transform: [{scaleX: 1.5}, {scaleY: 1.5}]}
+                      : {}
+                  }
+                  trackColor={
+                    Platform.OS === 'android' && {
+                      false: '#767577',
+                      true: '#81b0ff',
+                    }
+                  }
+                  ios_backgroundColor={isOpen ? 'green' : 'red'}
+                  value={isOpen}
+                  onValueChange={value => setIsOpen(value)}
+                />
               </View>
               <View style={globalStyle.userStoryContainer}>
                 <FlatList
