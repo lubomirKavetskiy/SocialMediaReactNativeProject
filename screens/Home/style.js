@@ -1,9 +1,13 @@
 import {StyleSheet} from 'react-native';
 
-import {getFontFamily} from '../fonts/helper';
-import {horizontalScale, scaleFontSize, verticalScale} from './scaling';
+import {getFontFamily} from '../../assets/fonts/helper';
+import {
+  horizontalScale,
+  scaleFontSize,
+  verticalScale,
+} from '../../assets/styles/scaling';
 
-const globalStyle = StyleSheet.create({
+const style = StyleSheet.create({
   header: {
     alignItems: 'center',
     marginTop: verticalScale(32),
@@ -40,4 +44,4 @@ const globalStyle = StyleSheet.create({
   },
 });
 
-export default globalStyle;
+export default style;
