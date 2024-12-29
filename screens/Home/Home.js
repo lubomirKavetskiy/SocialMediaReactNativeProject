@@ -24,7 +24,6 @@ import {scaleFontSize} from '../../assets/styles/scaling';
 
 import style from './style';
 import globalStyles from '../../assets/styles/globalStyles';
-import {Routes} from '../../navigation/Routes';
 
 const userStoriesPageSize = 4;
 const initialUserStoriesCurrentPage = 1;
@@ -32,7 +31,7 @@ const initialUserStoriesCurrentPage = 1;
 const userPostsPageSize = 3;
 const initialUserPostsCurrentPage = 1;
 
-const Home = ({navigation}) => {
+const Home = () => {
   const {
     userRenderedData: userStoriesRenderedData,
     handleLoadMoreData: handleLoadMoreStories,
@@ -66,9 +65,7 @@ const Home = ({navigation}) => {
             <>
               <View style={style.header}>
                 <Title title="Let's Explore" />
-                <TouchableOpacity
-                  style={style.messageIcon}
-                  onPress={() => navigation.navigate(Routes.Profile)}>
+                <TouchableOpacity style={style.messageIcon}>
                   <FontAwesomeIcon
                     icon={faEnvelope}
                     size={scaleFontSize(20)}
