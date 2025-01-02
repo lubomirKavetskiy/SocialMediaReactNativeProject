@@ -1,13 +1,39 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import {createDrawerNavigator} from '@react-navigation/drawer';
+import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 
 import {Routes} from './Routes';
 import Home from '../screens/Home/Home';
 import Profile from '../screens/Profile/Profile';
+import {Text, View} from 'react-native';
 
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
+const ProfileTabs = createMaterialTopTabNavigator();
+const Tab1 = () => (
+  <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+    <Text>Tab1</Text>
+  </View>
+);
+const Tab2 = () => (
+  <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+    <Text>Tab2</Text>
+  </View>
+);
+const Tab3 = () => (
+  <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+    <Text>Tab3</Text>
+  </View>
+);
+
+export const ProfileTabsNavigation = () => (
+  <ProfileTabs.Navigator>
+    <ProfileTabs.Screen name={'Tab1'} component={Tab1} />
+    <ProfileTabs.Screen name={'Tab2'} component={Tab2} />
+    <ProfileTabs.Screen name={'Tab3'} component={Tab3} />
+  </ProfileTabs.Navigator>
+);
 
 const MainMenuNavigation = () => (
   <Drawer.Navigator screenOptions={{headerTitle: ''}}>
